@@ -57,7 +57,8 @@ lets you do exactly that:
 
 ```clojure
 [[:datofu.uid/add-sequential-strings
-  nil "my-human-readable-id" [["a" :my.ent/id]]]]
+  nil "my-human-readable-id" [["a" :my.ent/id]
+                              ["b" :my.ent/id]]]]
 ;; will expand to something like:
 [[:db/add "a" :my.ent/id "my-human-readable-id"]
  [:db/add "b" :my.ent/id "my-human-readable-id-1"]
@@ -162,7 +163,7 @@ On the other hand, many migrations can be written directly in the form of Datalo
  Datofu provides that with `:datofu.utils/datalog-tx`
  
 For instance, imagine that all the Purchase entities in your e-commerce database have 
-their :purchase/amount in US dollars, and you need them to be in cents. You can write this migration as:
+their `:purchase/amount` in US dollars, and you need them to be in cents. You can write this migration as:
 
 ```clojure
 [[:datofu.utils/datalog-tx 

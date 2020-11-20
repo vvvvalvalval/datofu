@@ -404,7 +404,7 @@ Here is the same example as above, except that now Tags are represented as entit
        [?blog-post :blog.post/tags ?tag]
        [?tag :blog.tag/name ?tagName]]
   (d/db conn) [:blog.post/id 42])
-=> ["datomic" "flowers"]
+=> ["datomic" "birds"]
 ```
 
 This API may seem uselessly verbose and unwieldy, but it is designed this way to prevent

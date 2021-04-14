@@ -2,10 +2,20 @@
 
 > There's a :db/fn for that.
 
+[![Clojars Project](https://img.shields.io/clojars/v/vvvvalvalval/datofu.svg)](https://clojars.org/vvvvalvalval/datofu)
+
 This library provides common utilities for working with Datomic,
  mostly in the form of [database functions](http://docs.datomic.com/database-functions.html).
 
 Project status: alpha. Requires Datomic 0.9.5561 or higher.
+
+**Features:**
+* [Generating unique, readable ids](https://github.com/vvvvalvalval/datofu#generating-unique-readable-ids)
+* [Writing your schema concisely](https://github.com/vvvvalvalval/datofu#writing-your-schema-concisely-in-clojure)
+* [Schema evolution and migrations](https://github.com/vvvvalvalval/datofu#managing-data-schema-evolutions)
+* [Writing migrations in Datalog](https://github.com/vvvvalvalval/datofu#writing-migrations-in-datalog)
+* [Array-like data structures](https://github.com/vvvvalvalval/datofu#implementing-ordered-to-many-relationships-with-an-array-data-structure)
+* [Resetting to-many relationships](https://github.com/vvvvalvalval/datofu#resetting-to-many-relationships)
 
 ## Usage
 
@@ -177,7 +187,7 @@ Most migrations consist only of `:db/add` operations, so Datofu also provides `:
 but be aware that Datalog can have some overhead compared to the other querying APIs of Datomic, 
 so you don't want to run too much of it in your Transactor - it's OK for rare events like migrations.* 
 
-### Setting a default value for a new attribute
+#### Setting a default value for a new attribute
 
 In many cases, all you need from a migration is setting a default value for a new attribute.
  Datofu provides `:datofu.utils/add-default-attr-value` for that.

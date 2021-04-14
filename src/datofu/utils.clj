@@ -8,7 +8,7 @@
      "Constructs a transaction request by running a Datalog query.
      "
      '[db query inputs]
-     '(apply d/q query db inputs))
+     '(vec (apply d/q query db inputs)))
    (sch/db-clj-fn ::datalog-add
      "Given a Datalog query `query`, and a seq `inputs` of inputs for this query,
      will emit :db/add txes which e, a and v are the triples returned by running `(apply d/q query db inputs)`."

@@ -1,4 +1,4 @@
-(defproject vvvvalvalval/datofu "0.1.0"
+(defproject vvvvalvalval/datofu "0.1.1"
   :description "Battery-included Datomic"
   :url "https://github.com/vvvvalvalval/datofu"
   :license {:name "MIT"

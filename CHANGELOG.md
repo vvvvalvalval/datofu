@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 
+## 0.1.1 - 2021-04-14
+### Fixed
+- :datofu.utils/datalog-tx now always emits a vector.
+
 ## 0.1.0 - 2017-04-08
 ### Added
 - datofu.coll.array: schema for an arraylike data structure
@@ -12,4 +16,5 @@ All notable changes to this project will be documented in this file. This change
 - datofu.uid: generating string and long sequential ids
 - datofu.utils: Datalog tx fns and default attribute fn
 
-[Unreleased]: https://github.com/your-name/datofu/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/your-name/datofu/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/your-name/datofu/compare/0.1.0...0.1.1
